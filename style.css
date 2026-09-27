@@ -1002,3 +1002,9 @@ body.modal-open {
   }
 }
 
+
+/* Project feature summaries */
+.project-features{padding-left:20px;margin:18px 0 22px;color:var(--muted);font-size:14px;line-height:1.6}.project-features li{margin:0 0 10px;padding-left:3px}.project-features strong{color:var(--text);font-weight:550}.project details{margin-top:8px}.section-heading>p{max-width:320px}
+
+/* Compact highlights; details open on request. */
+.project-features{margin:16px 0 20px;line-height:1.55}.project-features li{margin-bottom:7px}.project details[open] summary{margin-bottom:14px}.project details[open] summary span{transform:rotate(45deg)}
