@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dinesh Jataprolu — Unity Developer</title>
-    <meta name="description" content="Solo Unity games by Dinesh Jataprolu. Explore Refract, Ember &amp; Tide, Apex Drift, and MergeForge through gameplay, project breakdowns, and honest development credits.">
+    <meta name="description" content="Unity developer Dinesh Jataprolu: mobile merge systems, save/load, inventory, rewards, laser puzzles, elemental combat and driving prototypes.">
     <meta name="theme-color" content="#0a0c10">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%230a0c10'/%3E%3Cpath%20d='M7%207h7c15%200%2015%2018%200%2018H7V7zm5%205v8h2c7%200%207-8%200-8z'%20fill='%237cebd8'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
@@ -33,12 +33,13 @@
           <h1 id="hero-title">Simple ideas.<br>
             <em>Playable worlds.</em>
           </h1>
-          <p class="intro">I’m Dinesh. I build games in Unity, bringing mechanics, shaders, and visual feedback together—one interaction at a time.</p>
+          <p class="intro">I’m Dinesh. I build Unity games that connect gameplay, progression, saved state and visual feedback.</p>
           <div class="hero-actions">
             <a class="button primary" href="#work">Explore my work <span aria-hidden="true">↓</span>
             </a>
             <a class="text-link" href="https://dineshjataprolu.itch.io/refract" target="_blank" rel="noopener noreferrer">Try Refract on itch.io ↗</a>
-          </div>
+          <a href="Dinesh_Jataprolu_Unity_Resume.pdf" class="text-link" download="">Download resume ↓</a>
+</div>
           <div class="hero-meta">
             <span>04 solo projects</span>
             <span>Unity · C# · Shader Graph · Blender</span>
@@ -75,7 +76,7 @@
             <h2 id="work-title">Selected work<span class="accent">.</span>
             </h2>
           </div>
-          <p>Four different experiments.<br>The same attention to how they play.</p>
+          <p>Four solo projects, from laser puzzles to connected mobile gameplay systems.<br>The same attention to how they play.</p>
         </div>
         <article class="project featured" id="refract">
           <div class="project-media">
@@ -90,25 +91,24 @@
               <span class="status">Playable on itch.io</span>
             </div>
             <h3>Refract</h3>
-            <p class="project-lead">A puzzle built around a beam of light.</p>
-            <p>Rotate mirrors, route coloured lasers, and unlock the path forward. Simple geometry and custom shaders give the puzzle its identity.</p>
-            <div class="tags">
-              <span>Unity</span>
-              <span>Shader Graph</span>
-              <span>Puzzle interactions</span>
-            </div>
+            <p class="project-lead">Light routing, colour logic and puzzle progression.</p>
+            <p>A 3D laser puzzle about rotating mirrors, routing coloured beams and opening barriers.</p>
+            <ul class="project-features">
+<li>Mirror reflections and colour-based laser puzzles</li>
+<li>Puzzle level design and saved progress</li>
+<li>Sound feedback and custom Shader Graph effects</li>
+</ul>
+<div class="tags">
+              <span>Unity URP</span><span>Laser puzzles</span><span>Save/load</span><span>Level design</span>
+</div>
             <div class="project-links">
               <a href="https://dineshjataprolu.itch.io/refract" target="_blank" rel="noopener noreferrer">Play on itch.io ↗</a>
               <a href="https://drive.google.com/drive/folders/1nW3t1J00ynUVR2LsIGHvsLCx0qs1qaVe" target="_blank" rel="noopener noreferrer">Screenshots &amp; demo ↗</a>
             </div>
-            <details>
-              <summary>My work &amp; credits <span aria-hidden="true">+</span>
-              </summary>
-              <p>Solo development: puzzle assembly, scene setup, primitive geometry, materials, and my own Shader Graph work. Code developed in Rider, integrated and tested in Unity.</p>
-              <p>
-                <strong>Design focus:</strong> making the laser path readable and mirror adjustments feel controlled.</p>
-            </details>
-          </div>
+            <details><summary>Project details &amp; credits <span aria-hidden="true">+</span></summary><p>Raycast reflections and visible beam paths connect mirrors, colour-changing interactions and barriers. Emissive, holographic and dissolve materials provide visual feedback.</p>
+<p><strong>My contribution:</strong> Solo puzzle design and Unity scene assembly, gameplay integration, saving, audio setup, testing and visual iteration. Primitive geometry and custom Shader Graph materials.</p>
+<p><strong>Availability:</strong> Playable build on itch.io. The public build may differ from the latest development work.</p></details>
+</div>
         </article>
         <div class="project-grid">
           <article class="project" id="ember">
@@ -124,24 +124,24 @@
                 <span class="status">Prototype</span>
               </div>
               <h3>Ember &amp; Tide</h3>
-              <p class="project-lead">Two elements. A first combat playground.</p>
-              <p>A third-person prototype combining fire and water abilities with movement, a follow camera, and enemies that pursue and attack.</p>
-              <div class="tags">
-                <span>Unity</span>
-                <span>NavMesh AI</span>
-                <span>Spell effects</span>
-              </div>
+              <p class="project-lead">Choose the element that counters the enemy.</p>
+              <p>A third-person combat prototype where the right element changes the outcome of an encounter.</p>
+              <ul class="project-features">
+<li>Fire and water powers with enemy-specific damage</li>
+<li>NavMesh enemies that follow and attack</li>
+<li>Third-person camera, animations and spell effects</li>
+</ul>
+<div class="tags">
+                <span>Elemental damage</span><span>NavMesh AI</span><span>Spell effects</span>
+</div>
               <div class="project-links">
                 <a href="https://dineshjataprolu.itch.io/ember-and-tide" target="_blank" rel="noopener noreferrer">Play on itch.io ↗</a>
                 <a href="https://drive.google.com/drive/folders/1A9C8g5yIjRa1OAUjEEHpdKfPT2LdGbX0" target="_blank" rel="noopener noreferrer">View screenshots ↗</a>
               </div>
-              <details>
-                <summary>My work &amp; credits <span aria-hidden="true">+</span>
-                </summary>
-                <p>Solo project assembly, gameplay integration, scene setup, and testing. Free Unity character assets and Mixamo animations. Shader effects created by me following tutorials. Code developed in Rider.</p>
-                <p>Also developed under the working name <strong>Zero Heir</strong>.</p>
-              </details>
-            </div>
+              <details><summary>Project details &amp; credits <span aria-hidden="true">+</span></summary><p>Water counters fire enemies, while fire counters ice enemies. Damage rules encourage switching abilities to match the encounter.</p>
+<p><strong>My contribution:</strong> Solo scene assembly, elemental gameplay integration, camera and enemy setup, and playtesting.</p>
+<p><strong>Assets &amp; credits:</strong> Free Unity character assets and Mixamo animations. Shader effects created using tutorials. Also developed under the working name Zero Heir.</p></details>
+</div>
           </article>
           <article class="project" id="apex">
             <div class="project-media">
@@ -156,23 +156,22 @@
                 <span class="status">Video showcase</span>
               </div>
               <h3>Apex Drift</h3>
-              <p class="project-lead">A car, a course, and room to experiment.</p>
-              <p>A driving prototype set on a course assembled from basic shapes. An exploration of vehicle interaction, scene building, and feedback in motion.</p>
-              <div class="tags">
-                <span>Unity</span>
-                <span>Blender</span>
-                <span>Vehicle gameplay</span>
-              </div>
+              <p class="project-lead">Checkpoints, stunts and driving feedback.</p>
+              <p>A driving prototype set on a stunt course built from simple Blender geometry.</p>
+              <ul class="project-features">
+<li>Checkpoint progression and stunt gameplay</li>
+<li>Particle effects for driving feedback</li>
+<li>Course construction in Blender and Unity</li>
+</ul>
+<div class="tags">
+                <span>Checkpoints</span><span>Stunts</span><span>Particles</span><span>Blender</span>
+</div>
               <div class="project-links">
                 <a href="https://drive.google.com/file/d/1DBsnkyx3Q69L4IyShRdQ7z9qbZMJA-0Y/view" target="_blank" rel="noopener noreferrer">Full gameplay recording ↗</a>
               </div>
-              <details>
-                <summary>My work &amp; credits <span aria-hidden="true">+</span>
-                </summary>
-                <p>Solo development and Unity integration. Car model sourced from the Unity Asset Store; remaining scene geometry made from basic shapes in Blender and imported into Unity. Code developed in Rider.</p>
-                <p>Shown through an archived gameplay recording; no playable build is offered here.</p>
-              </details>
-            </div>
+              <details><summary>Project details &amp; credits <span aria-hidden="true">+</span></summary><p><strong>My contribution:</strong> Solo Unity assembly, gameplay integration, course construction and visual feedback.</p>
+<p><strong>Assets &amp; availability:</strong> Car model from the Unity Asset Store; remaining scene geometry made from basic shapes in Blender. Presented through archived gameplay footage; no playable build is offered.</p></details>
+</div>
           </article>
         </div>
         <article class="project merge" id="merge">
@@ -188,27 +187,32 @@
               <span class="status">In development</span>
             </div>
             <h3>MergeForge</h3>
-            <p class="project-lead">Small interactions, many moving parts.</p>
-            <p>A mobile merge game built around generating items, combining them, and progressing through orders. My ongoing project for exploring interconnected game systems and touch interaction.</p>
-            <div class="tags">
-              <span>Unity</span>
-              <span>Mobile UI</span>
-              <span>Drag &amp; merge</span>
-            </div>
-            <div class="focus-note">
-              <span>WHAT I’M REFINING</span>
-              <p>How items move, merge, and settle on the board—and how clearly the interface responds to each action.</p>
-            </div>
+            <p class="project-lead">A mobile merge game with connected progression systems.</p>
+            <p>Generate and merge alchemical items, fulfil customer orders and manage space on a 56-cell board.</p>
+            <ul class="project-features">
+<li>Generators, merging and progressive customer orders</li>
+<li>Save/load, inventory and timed trapped bubbles</li>
+<li>Daily login, double-coin bonuses and rewarded-ad flows</li>
+<li>Mobile UI, sound and visual feedback</li>
+</ul>
+<div class="tags">
+              <span>Save/load</span><span>Inventory</span><span>Progressive orders</span><span>Rewards</span><span>Mobile UI</span>
+</div>
             <div class="project-links">
               <a href="https://drive.google.com/file/d/1PuOTl1_PIb_9zViBYrqU6fIcM0OLgvWb/view" target="_blank" rel="noopener noreferrer">Full gameplay recording ↗</a>
             </div>
-            <details>
-              <summary>My work &amp; credits <span aria-hidden="true">+</span>
-              </summary>
-              <p>Solo game assembly, interface composition, gameplay integration, testing, and iteration. Visuals combine AI-generated sprites with basic sprites and my own setup. Code developed in Rider.</p>
-              <p>The recording shows a development build; the game is still evolving.</p>
-            </details>
-          </div>
+            <details><summary>Project details &amp; credits <span aria-hidden="true">+</span></summary><p><strong>Production &amp; merging:</strong> Five generator tiers, 12 normal merge levels, five rare levels, energy, cooldowns and upgrades.</p>
+<p><strong>Save/load &amp; inventory:</strong> Persisted board state, stash slots, orders, currencies, progression and timers; permanent and temporary inventory unlocks.</p>
+<p><strong>Orders &amp; progression:</strong> Single- and multi-item orders, matching feedback, XP and levels. New ordinary Potion orders use production effort and the generators currently on the board.</p>
+<p><strong>Daily &amp; idle rewards:</strong> Daily login/streak rewards, offline rewards and double-coin reward flows.</p>
+<p><strong>Trapped bubbles:</strong> Timed bonus items with claim/expiry behaviour and safeguards against using unclaimed items.</p>
+<p><strong>UI, sound &amp; effects:</strong> Portrait HUD, item and upgrade panels, order animations, audio events, merge particles and drag feedback.</p>
+<p><strong>Ad integration status:</strong> Eight game-side rewarded placements cover cooldown skips, order reward doubling, bubble claims, idle coin doubling, energy refills, order refreshes, stash unlocks and streak doubling. Daily caps and mock/test paths are implemented; live ad SDK validation is pending.</p>
+<p><strong>Orders based on production effort:</strong> Integrated and validated an expected-taps evaluator across five generator tiers and 12 target levels. Quick, Standard and Grand profiles guide new ordinary orders; held requirements and rewards retain stable identities across reloads. Special multi-item orders use a separate existing generation path.</p>
+<p><strong>Reliability &amp; testing:</strong> Worked on stateful object pooling, slot reservations, safe save restoration and stale-callback guards. A rapid-drag bug was traced to Rigidbody interpolation restoring an old pose; the fix was checked on PC, a physical Android APK and Unity Remote.</p>
+<p><strong>My contribution &amp; credits:</strong> Solo game direction, Unity integration, prefab and ScriptableObject configuration, interface assembly, testing and iteration. Visuals combine AI-generated artwork with basic sprites and my own setup.</p>
+<p><strong>Development status: </strong>In development; also known internally as Merge Shop. The video shows an earlier build and may not show all current features.</p></details>
+</div>
         </article>
       </section>
       <!-- APPROACH: your development process. -->
@@ -255,10 +259,10 @@
         <div>
           <p class="about-lead">A CSE graduate with a specialisation in Game Development &amp; UI/UX, building solo games from Vijayawada, India.</p>
           <p>I enjoy the overlap between gameplay and visuals: setting up a scene, connecting its interactions, and giving it a visual language through shaders and feedback.</p>
-          <p>I’m interested in freelance Unity work involving prototypes, scene implementation, and gameplay integration.</p>
+          <p>Open to junior Unity roles, internships and scoped freelance projects involving gameplay systems, prototypes and scene implementation.</p>
           <div class="workflow-note">
             <h3>A note on my workflow</h3>
-            <p>These are solo projects. I develop code in Rider and handle Unity integration, scene setup, testing, and iteration. Third-party assets, AI-generated artwork, and tutorial-based effects are credited in each project.</p>
+            <p>These are solo projects. I handle Unity integration, scene setup, testing and iteration. Third-party assets, generated artwork and tutorial-based effects are credited with each project.</p>
           </div>
         </div>
       </section>
@@ -273,7 +277,7 @@
           </a>
           <a href="https://github.com/Dinesh31747" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span>
           </a>
-          <a href="mailto: jataproludinesh9@gmail.com"> Email me <span aria-hidden="true">↗</span>
+          <a href="mailto:jataproludinesh9@gmail.com"> Email me <span aria-hidden="true">↗</span>
 </a>
         </div>
         <div class="footer-bottom">
