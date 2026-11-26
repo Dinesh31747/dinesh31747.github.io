@@ -3,268 +3,538 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <title>Chain Spark Privacy Policy | Suba Studios</title>
+    <meta
+      name="description"
+      content="How Chain Spark handles game saves, accounts, cosmetic purchases, rewarded ads, analytics and privacy requests."
+    />
     <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f3f7f9;
+        --surface: #fff;
+        --text: #192d3a;
+        --muted: #465e6d;
+        --accent: #006775;
+        --line: #c9d9e0;
+        --soft: #e8f4f5;
+        --focus: #795000;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #070e19;
+          --surface: #101d2b;
+          --text: #edf3f8;
+          --muted: #b7cbd9;
+          --accent: #79e3ea;
+          --line: #375263;
+          --soft: #142f3c;
+          --focus: #f7ce85;
+        }
+      }
       * {
         box-sizing: border-box;
       }
+      html {
+        scroll-padding-top: 24px;
+      }
       body {
         margin: 0;
-        background: #f4f7f8;
-        color: #172b3a;
+        background: var(--bg);
+        color: var(--text);
         font:
-          17px/1.7 system-ui,
+          17px/1.75 system-ui,
           -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
           sans-serif;
       }
       main {
-        max-width: 820px;
+        max-width: 900px;
         margin: 32px auto;
         padding: clamp(22px, 5vw, 48px);
-        background: white;
-        border-top: 5px solid #007b83;
-      }
-      h1 {
-        font-size: clamp(28px, 5vw, 40px);
-        line-height: 1.2;
-      }
-      h2 {
-        font-size: 23px;
-        margin-top: 32px;
-        line-height: 1.35;
-      }
-      a {
-        color: #006b77;
-        overflow-wrap: anywhere;
-      }
-      a:focus-visible {
-        outline: 3px solid #d18c00;
-        outline-offset: 4px;
-      }
-      .meta {
-        color: #526574;
-      }
-      .notice {
-        padding: 14px 18px;
-        background: #fff5d6;
-        border-left: 4px solid #9a6900;
-      }
-      .button {
-        display: inline-block;
-        background: #006b77;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 7px;
-        text-decoration: none;
+        background: var(--surface);
+        border-top: 4px solid var(--accent);
+        border-radius: 0 0 16px 16px;
       }
       nav {
         display: flex;
-        gap: 24px;
         flex-wrap: wrap;
+        gap: 12px 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+        font-size: 15px;
+      }
+      nav a[aria-current="page"] {
+        font-weight: 750;
+        text-decoration-thickness: 2px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        margin-top: 28px;
+      }
+      h1 {
+        font-size: clamp(29px, 6vw, 43px);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 14px 0;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.35;
+        margin: 34px 0 12px;
+      }
+      h3 {
+        font-size: 19px;
+        line-height: 1.4;
+        margin: 20px 0 8px;
+      }
+      p,
+      ul,
+      ol {
+        margin: 12px 0;
       }
       li {
+        padding-left: 2px;
         margin: 8px 0;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 4px;
+        overflow-wrap: anywhere;
+      }
+      a:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 4px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .callout,
+      .card {
+        padding: 18px 22px;
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+      .callout {
+        border-left: 4px solid var(--accent);
+        margin: 24px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        min-height: 48px;
+        border: 2px solid var(--accent);
+        border-radius: 8px;
+        font-weight: 700;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+      .button:hover {
+        text-decoration: underline;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        background: var(--soft);
       }
       footer {
         margin-top: 40px;
-        border-top: 1px solid #d5e0e3;
-        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+        font-size: 15px;
       }
-      @media (max-width: 850px) {
+      .skip {
+        position: absolute;
+        left: 12px;
+        top: -100px;
+        background: var(--surface);
+        padding: 12px;
+      }
+      .skip:focus {
+        top: 12px;
+      }
+      @media (max-width: 900px) {
         main {
           margin: 0;
+          border-radius: 0;
+        }
+      }
+      @media print {
+        body,
+        main {
+          background: white;
+          color: black;
+        }
+        main {
+          margin: 0;
+          max-width: none;
+          padding: 0;
+          border: 0;
+        }
+        .button {
+          border: 1px solid black;
+        }
+        a {
+          color: black;
+        }
+        nav,
+        .skip {
+          display: none;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <nav aria-label="Page navigation">
-        <a href="chainspark-privacy.html">Privacy policy</a
-        ><a href="chainspark-delete-account.html">Delete account or data</a>
+    <a class="skip" href="#content">Skip to content</a>
+    <main id="content">
+      <nav aria-label="Policy pages">
+        <a href="chainspark-privacy.html" aria-current="page">Privacy policy</a
+        ><a href="chainspark-delete-account.html">Delete account or data</a
+        ><a href="chainspark-terms.html">Terms of Service</a>
       </nav>
-      <p class="meta">Suba Studios · Chain Spark: Circuit Puzzle</p>
-      <h1>Chain Spark Privacy Policy</h1>
-      <p class="meta">
-        Prepared 20 November 2026 · Applies to the Android update with optional
-        cloud saves and rewarded advertising.
+      <header>
+        <p class="eyebrow">SUBA STUDIOS · CHAIN SPARK: CIRCUIT PUZZLE</p>
+        <h1>Chain Spark Privacy Policy</h1>
+        <p class="muted">Last updated: 26 November 2026</p>
+      </header>
+      <p>
+        Suba Studios, operated by Dinesh Jataprolu in India, develops Chain
+        Spark: Circuit Puzzle. This policy explains how information is used for
+        gameplay, optional accounts and cloud saves, cosmetics, purchases where
+        enabled, rewarded advertising, analytics and support.
+      </p>
+      <div class="callout">
+        <strong>Your main choices</strong>
+        <ul>
+          <li>
+            You can play as a guest without connecting a Unity Player Account.
+          </li>
+          <li>
+            Account connection enables cloud backup and recovery. Paid
+            cosmetics, where available, require account connection so ownership
+            can be checked.
+          </li>
+          <li>
+            You can turn off <strong>Share playtest data</strong> in Shop &amp;
+            Settings. This controls the game’s future Firebase analytics
+            collection on that installation; it does not delete existing records
+            or control advertising providers.
+          </li>
+          <li>
+            You can
+            <a href="chainspark-delete-account.html"
+              >request account deletion or deletion of specific data while
+              keeping your account</a
+            >.
+          </li>
+        </ul>
+      </div>
+      <h2>1. Game progress and cosmetic settings</h2>
+      <p>
+        The game stores levels, stars, Sparks, hints, rewards, daily-puzzle
+        history, tutorial progress and preferences on your device. Cosmetic
+        information can include Sparks unlocks, selected theme, trail, arrows
+        and receivers, background and sound, and the expiry time of a
+        rewarded-ad trial.
       </p>
       <p>
-        Suba Studios develops Chain Spark: Circuit Puzzle. This policy explains
-        how the game uses information for gameplay, optional accounts and cloud
-        saves, analytics, advertising and support.
-      </p>
-      <h2>Your choices</h2>
-      <ul>
-        <li>
-          You can play without connecting a Unity Player Account. Guest progress
-          is saved on your device.
-        </li>
-        <li>
-          Connecting an account enables cloud backup and recovery of that
-          account's progress.
-        </li>
-        <li>
-          You can change <strong>Share playtest data</strong> in Shop &amp;
-          Settings. In this version, this setting is on by default on a fresh
-          installation. Turning it off stops the game's future Firebase
-          analytics collection on that installation; it does not delete records
-          already submitted or control advertising providers.
-        </li>
-        <li>
-          Rewarded ads are offered for optional in-game benefits. Advertising
-          services may process information when they initialize or request an
-          ad, before a video is watched.
-        </li>
-      </ul>
-      <h2>Progress on your device and in the cloud</h2>
-      <p>
-        The game stores unlocked levels, stars, Sparks, hints, reward and
-        daily-puzzle history, selected theme, tutorial progress and preferences
-        locally. Guest saves and connected-account saves are kept separate.
-        Signing out opens the separate guest save. Unsynced local account
-        progress is retained for that same account so it can be recovered when
-        the account reconnects; signing out does not delete the account.
+        Guest saves and connected-account saves are kept separate. Signing out
+        returns to the separate guest save. Unsynced progress for a connected
+        account is retained locally for that same account; signing out is not
+        deletion. Cosmetic trial timers and equipment preferences are stored
+        locally for the relevant profile and are not guaranteed to transfer to
+        another device.
       </p>
       <p>
         If you connect an account, Unity Authentication and Unity Cloud Save
-        process a player identifier and service information such as IP addresses
-        to authenticate you and store game progress. The uploaded game save
-        includes levels, stars, Sparks, hints, theme selection and reward
-        history. Cloud backup and recovery require a successful connection.
-        Uninstalling or clearing app storage can remove local progress that has
-        not been uploaded.
+        process a player identifier and service information, such as IP
+        addresses, to authenticate you and store game progress. Uploaded saves
+        include gameplay progress, Sparks, hints, reward history, supported
+        theme selections and Sparks cosmetic unlocks. Paid purchase ownership is
+        checked separately from game-save backups.
       </p>
-      <h2>Unity Player Accounts</h2>
       <p>
-        Sign-in opens Unity's account service in your browser. Unity handles
-        account details, including the email address used for account creation
+        Cloud backup requires a successful connection. Uninstalling or clearing
+        app storage can remove local progress that has not been uploaded.
+      </p>
+      <h2>2. Unity Player Accounts</h2>
+      <p>
+        Sign-in opens Unity’s account service in your browser. Unity handles
+        account details, including the email address used to create the account
         and a Unity Player Account identifier. The game uses authentication
         tokens and player identifiers; Suba Studios does not ask you to send
-        your account password. Unity's separate player account can be used with
-        other supported games and is governed by
+        your password. Unity’s separate player account may be used with other
+        supported games and is covered by
         <a href="https://unity.com/legal/privacy-policy"
-          >Unity's privacy policy</a
+          >Unity’s privacy policy</a
         >.
       </p>
-      <h2>Playtest and gameplay analytics</h2>
+      <h2>3. Google Play purchases and verification</h2>
       <p>
-        When Share playtest data is enabled, Google Analytics for Firebase
-        receives gameplay events such as level starts, wins, failures, retries,
-        hints and tap rescues. Events may include level and attempt numbers,
-        campaign or daily mode, elapsed time, taps used or remaining, and Sparks
-        spent. Firebase also processes app-instance identifiers, app and
-        operating-system information, session activity and approximate location
-        derived from IP addresses.
+        This section applies when you purchase or restore paid cosmetics in a
+        version where in-app purchases are enabled. Google Play handles checkout
+        and payment details. Suba Studios does not receive your full
+        payment-card number, CVV, UPI PIN or banking password.
       </p>
       <p>
-        The Android build is configured to disable Firebase Analytics'
-        collection of Android advertising IDs. This setting does not disable
-        advertising-ID use by separate advertising SDKs. See
+        To check a purchase and associate it with the correct game account, the
+        app sends the cosmetic product ID and Google Play purchase token to our
+        verification service with a Unity authentication token. The service
+        checks the authenticated player identifier and uses Google Play’s
+        purchase API to obtain purchase status and account-association
+        information. Google Play also receives a hashed game-player identifier
+        when checkout is started. Hashing makes this identifier pseudonymous; it
+        does not make it anonymous.
+      </p>
+      <p>
+        This information is used to deliver and restore purchased cosmetics,
+        prevent invalid or duplicate grants, keep different players’ purchases
+        separate, and check cancelled, refunded or revoked purchases. Google
+        Cloud hosts the verification service when it is enabled. The verifier
+        processes purchase checks without maintaining a separate purchase
+        database. Google Play retains its transaction records under its own
+        policies. Hosting services can process connection metadata such as IP
+        address, request time, response status and user-agent information for
+        service operation and security.
+      </p>
+      <p>
+        If you contact support about a purchase, we may ask for the Google Play
+        order ID, product name and relevant account details. Do not email raw
+        purchase tokens or authentication tokens. See
+        <a href="https://policies.google.com/privacy"
+          >Google’s privacy policy</a
+        >
+        and our <a href="chainspark-terms.html">Terms of Service</a>.
+      </p>
+      <h2>4. Gameplay analytics</h2>
+      <p>
+        <strong
+          >Share playtest data is on by default on a fresh installation of the
+          described version.</strong
+        >
+        When enabled, Google Analytics for Firebase receives gameplay events
+        such as level starts, wins, failures, retries, hints and tap rescues.
+        Events may include level and attempt numbers, campaign or daily mode,
+        elapsed time, taps used or remaining, and Sparks spent.
+      </p>
+      <p>
+        Firebase also processes app-instance identifiers, app and
+        operating-system information, session activity and approximate location
+        derived from IP addresses. The Android configuration disables Firebase
+        Analytics’ collection of Android advertising IDs. This does not disable
+        advertising-ID processing by separate advertising SDKs. See
         <a href="https://firebase.google.com/support/privacy"
           >Firebase privacy information</a
         >
         and
-        <a href="https://policies.google.com/privacy">Google's privacy policy</a
+        <a href="https://policies.google.com/privacy">Google’s privacy policy</a
         >.
       </p>
-      <h2>Advertising</h2>
+      <h2>5. Rewarded advertising and trials</h2>
       <p>
         Chain Spark uses Unity LevelPlay mediation. Advertising services used
-        for this release include ironSource Ads and Unity Ads.
-        Depending on the provider, device settings and applicable privacy
-        choices, advertising services process device or advertising identifiers,
-        IP addresses and approximate location, ad requests, views and
-        interactions, and diagnostic or performance information. These services
-        use information to deliver and measure ads, prevent fraud and maintain
-        their services. Ad-related information may be shared with advertising
-        partners.
+        for this release include <strong>ironSource Ads and Unity Ads</strong>.
+        Depending on the provider, device settings and privacy choices, these
+        services process device or advertising identifiers, IP addresses and
+        approximate location, ad requests, views and interactions, and
+        diagnostic or performance information.
       </p>
       <p>
-        For provider privacy information and controls, see
-        <a href="https://unity.com/legal/privacy-policy">Unity / ironSource</a>
-        and <a href="https://policies.google.com/privacy">Google</a>. You can
-        also use the advertising-ID controls available in your Android settings.
-        Turning off gameplay analytics does not turn off advertising data
+        Advertising providers use this information to deliver and measure ads,
+        prevent fraud and maintain their services. Ad-related information may be
+        shared with advertising partners. Processing can begin when an
+        advertising service initializes or requests an ad, before a video is
+        watched. Choosing not to watch an ad does not necessarily stop all SDK
         processing.
       </p>
-      <h2>Support information</h2>
+      <p>
+        Rewarded ads offer optional benefits such as hints or time-limited
+        cosmetic access. The game records reward delivery and, for cosmetic
+        trials, an expiry time. A trial does not itself create a paid purchase.
+        See
+        <a href="https://unity.com/legal/privacy-policy"
+          >Unity / ironSource privacy information</a
+        >. Android advertising-ID controls and any privacy controls presented by
+        the advertising service may provide additional choices. Turning off
+        gameplay analytics does not turn off advertising processing.
+      </p>
+      <h2>6. Support and website access</h2>
       <p>
         If you email
         <a href="mailto:hello.subastudios@gmail.com"
           >hello.subastudios@gmail.com</a
         >, we receive your email address and the information you choose to send.
-        We use it to answer your request, investigate a problem or verify a data
-        request. Please do not send passwords, verification codes or
-        payment-card information.
-      </p>
-      <h2>Retention and security</h2>
-      <p>
-        Local saves remain until removed through app controls, clearing app
-        storage or uninstalling, subject to the device's own backup behaviour.
-        Cloud progress is retained until the game account or its saved data is
-        deleted. Signing out alone does not request deletion.
+        We use it to respond, investigate problems and verify data requests.
+        Avoid sending passwords, one-time codes or payment credentials.
       </p>
       <p>
-        Our published Google Analytics retention settings are two months for
-        event data and fourteen months for user data, with new activity
-        restarting the user-data retention period. Google applies its scheduled
-        deletion processes, and aggregated reporting can remain for longer.
-        Advertising and Unity account services have their own retention
-        practices described in their linked policies. Support correspondence is
-        kept as needed to resolve requests and meet applicable obligations.
-      </p>
-      <p>
-        Authentication, cloud-save and the named analytics and advertising
-        services use encrypted connections for data sent over the network. No
-        storage or transmission system can guarantee absolute security. These
-        providers may process information outside your country.
-      </p>
-      <h2 id="delete-account">
-        Delete your game account or request data deletion
-      </h2>
-      <p>
-        You can request deletion without having the app installed. Use our
-        <a href="chainspark-delete-account.html"
-          >Chain Spark account and data deletion page</a
-        >, or email
+        These policy pages are hosted using GitHub Pages. GitHub may process
+        technical connection information when you visit them, as described in
+        the
         <a
-          href="mailto:hello.subastudios@gmail.com?subject=Chain%20Spark%20account%20deletion"
-          >hello.subastudios@gmail.com</a
-        >
-        with the subject <strong>Chain Spark account deletion</strong>.
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+          >GitHub privacy statement</a
+        >. These pages contain no added analytics scripts, advertising scripts
+        or tracking cookies.
+      </p>
+      <h2>7. Retention</h2>
+      <div class="table-wrap">
+        <table>
+          <caption class="muted">
+            How different records are retained
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Information</th>
+              <th scope="col">Retention and deletion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Local game saves and cosmetic settings</td>
+              <td>
+                Remain until removed through relevant game controls, clearing
+                app storage or uninstalling, subject to Android backup
+                behaviour. Expired trial access stops; its stored expiry record
+                is removed when the game checks it.
+              </td>
+            </tr>
+            <tr>
+              <td>Connected game account and cloud progress</td>
+              <td>
+                Retained until the game account or the relevant saved data is
+                deleted. Signing out alone does not delete them.
+              </td>
+            </tr>
+            <tr>
+              <td>Firebase analytics</td>
+              <td>
+                Our published settings are two months for event data and
+                fourteen months for user data, with new activity restarting the
+                user-data retention period. Google applies scheduled deletion;
+                aggregated reporting can remain longer.
+              </td>
+            </tr>
+            <tr>
+              <td>Purchase verification</td>
+              <td>
+                The verifier uses submitted tokens to process the request and
+                does not keep a separate purchase database. Google Play
+                maintains its transaction history. Infrastructure and security
+                logs follow the hosting service’s configured retention and
+                applicable audit requirements; contact us for the retention
+                applicable to a specific record.
+              </td>
+            </tr>
+            <tr>
+              <td>Support and deletion correspondence</td>
+              <td>
+                Kept as needed to resolve requests, document their handling and
+                meet applicable legal or security obligations. If a retention
+                exception applies to your request, we will explain the data,
+                reason and applicable period.
+              </td>
+            </tr>
+            <tr>
+              <td>Advertising and provider accounts</td>
+              <td>
+                Subject to the respective providers’ policies and deletion
+                processes. We will assist with requests concerning identifiable
+                data processed for the game.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>8. Security, service providers and international processing</h2>
+      <p>
+        Authentication, cloud saving and purchase verification use encrypted
+        network connections, as do the named analytics and advertising services.
+        No storage or transmission system guarantees absolute security. Service
+        providers may process information outside your country. Their roles
+        include authentication and cloud storage (Unity), analytics and payments
+        (Google), verification hosting (Google Cloud where enabled), advertising
+        (Unity LevelPlay, ironSource Ads and Unity Ads), and hosting these pages
+        (GitHub).
+      </p>
+      <h2>9. Delete your account or specific data</h2>
+      <p>
+        Visit our
+        <a href="chainspark-delete-account.html"
+          >account and data deletion page</a
+        >. It explains how to delete the Chain Spark game account and its
+        associated data, or request deletion of specific data while keeping the
+        account. No app installation or website login is needed to submit an
+        email request. We may need proportionate verification to protect your
+        information.
       </p>
       <p>
-        In the app, open Save Progress / Cloud Save, then Account Options, then
-        Delete Game Cloud Account. The game asks for confirmation. This removes
-        the Chain Spark cloud backups and game cloud account and removes that
-        account's local archive on the device performing deletion. The separate
-        guest save remains. Deletion cannot remotely erase offline files on
-        other devices; contact us if you need help removing remaining copies.
+        In the app, open Save Progress / Cloud Save → Account Options → Delete
+        Game Cloud Account and confirm. The game removes its cloud-save records
+        and game cloud account and clears the corresponding local progress
+        archive on the device completing the operation. The separate guest save
+        remains. Additional local preferences or offline copies on other devices
+        may require separate cleanup; an account deletion request covers
+        associated data within our control, not just cloud progress.
       </p>
       <p>
-        Deleting your Chain Spark game account does not delete the separate
-        Unity Player Account, and deleting the Unity Player Account alone does
-        not necessarily delete your Chain Spark data. The deletion page explains
-        both routes. Requests about analytics, advertising or support
-        correspondence are handled according to the information we can identify
-        and the relevant provider's processes. Where records must be retained
-        for legitimate legal or security reasons, we will explain the applicable
-        exception.
+        Deleting a Chain Spark game account does not automatically delete the
+        separate Unity Player Account or Google Play transaction history, and
+        does not automatically issue a refund. Contact us for purchase-access
+        assistance. We will handle associated data held by our service providers
+        through their applicable processes and explain any justified retention
+        exceptions.
       </p>
-      <h2>Age and policy changes</h2>
+      <h2>10. Age, changes and contact</h2>
       <p>
         Chain Spark is intended for players aged 13 and older. Account and
         advertising services may impose additional age requirements depending on
-        your location. Contact us if you believe a child has provided
-        information inappropriately. We update this page when the game's data
-        practices change.
+        location. Contact us if you believe a child has provided information
+        inappropriately. We update this page when the game’s data practices
+        change.
       </p>
-      <footer>
-        Contact:
+      <p>
+        For privacy questions or requests, email
         <a href="mailto:hello.subastudios@gmail.com"
           >hello.subastudios@gmail.com</a
-        >
+        >.
+      </p>
+      <footer>
+        <p>
+          Chain Spark: Circuit Puzzle · Suba Studios<br />Contact:
+          <a href="mailto:hello.subastudios@gmail.com"
+            >hello.subastudios@gmail.com</a
+          >
+        </p>
+        <p class="muted">
+          This page follows your device’s light or dark appearance. No account
+          or sign-in is needed to read it.
+        </p>
       </footer>
     </main>
   </body>
